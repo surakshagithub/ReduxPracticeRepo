@@ -1,25 +1,17 @@
-import CakeContainer from "./Components/CakeContainer";
+// import CakeContainer from "./Components/CakeContainer";
 import { Provider } from "react-redux";
+import TcakeContainer from "./Components/TcakeContainer";
+import TicecreamContainer from "./Components/TicecreamContainer";
+import TusersContainer from "./Components/TusersContainer";
 // import store from './redux/cake/store';
 import store from "./redux/store";
 
-<<<<<<< HEAD
-import HooksCakeContainer from './Components/HooksCakeContainer';
-import IceCreamContainer from './Components/IceCreamContainer';
-import NewCakeContainer from './Components/NewCakeContainer';
-function App() {
-  return (
-    <div>
-    <Provider store={store}>
-    <CakeContainer />
-    <HooksCakeContainer/>
-    <IceCreamContainer/>
-    <NewCakeContainer/>
-    </Provider>
-=======
-import HooksCakeContainer from "./Components/HooksCakeContainer";
-import IceCreamContainer from "./Components/IceCreamContainer";
-import { UserComponent } from "./Components/UserComponent";
+// import HooksCakeContainer from "./Components/HooksCakeContainer";
+// import IceCreamContainer from "./Components/IceCreamContainer";
+// import { UserComponent } from "./Components/UserComponent";
+// import UserContainer from "./Components/UserContainer";
+// import FetchingUsers from "./Components/FetchingUsers";
+// import NewCakeContainer from "./Components/NewCakeContainer";
 function App() {
   return (
     <div
@@ -30,12 +22,17 @@ function App() {
       }}
     >
       <Provider store={store}>
-        <CakeContainer />
+        {/* <CakeContainer />
         <HooksCakeContainer />
-        <IceCreamContainer />
-        <UserComponent />
+        <IceCreamContainer /> */}
+        {/* <UserContainer /> */}
+        {/* <NewCakeContainer/>
+        <FetchingUsers/> */}
+        <TcakeContainer/>
+        <TicecreamContainer/>
+        <TusersContainer/>
+      
       </Provider>
->>>>>>> origin/master
     </div>
   );
 }

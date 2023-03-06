@@ -6,7 +6,7 @@ import {
 
 export const fetchUserRequest=(()=>{
     return {
-        type:FETCH_USERS_REQUEST
+        type:FETCH_USERS_REQUEST,
     }
 })
 
@@ -23,3 +23,19 @@ export const fetchUserFailure=((error)=>{
         payload:error
     }
 })
+
+export const fetchUser=()=>{
+    return function(dispatch){
+        // console.log("calling fetch user dispatch")
+        dispatch(fetchUserRequest());
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then((data) => {
+            const users=data;
+            console.log(users)
+            dispatch(fetchUserSuccess(users))
+        }).catch(error => {
+            dispatch(fetchUserFailure(error.message));
+        })
+    }
+}

@@ -27,7 +27,7 @@ const userReducer=((state=initialState,action)=>{
         case FETCH_USERS_SUCCESS:{
             return{
                 ...state,
-                users:action.payload,
+                users:action.payload || [],
                 error:""
             }
         
